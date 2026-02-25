@@ -7,9 +7,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.nutriritmo.network.RetrofitClient
 import kotlinx.coroutines.launch
+import android.util.Log
+import androidx.compose.runtime.LaunchedEffect
 
 @Composable
+
 fun DashboardScreen(idUsuario: Int) {
+    LaunchedEffect(Unit) {
+        try {
+            val res = RetrofitClient.api.ping()
+            Log.d("PING_ANDROID", res.body().toString())
+        } catch (e: Exception) {
+            Log.e("PING_ANDROID", "Error", e)
+        }
+    }
     val scope = rememberCoroutineScope()
     var estado by remember { mutableStateOf("Cargando...") }
     var error by remember { mutableStateOf<String?>(null) }
@@ -53,3 +64,4 @@ fun DashboardScreen(idUsuario: Int) {
         }
     }
 }
+

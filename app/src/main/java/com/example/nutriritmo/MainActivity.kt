@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             NutriRitmoTheme {
-                NutriNav(idUsuario = 1) // 👈 por ahora usuario 1
+                NutriNav() //
             }
         }
     }
