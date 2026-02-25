@@ -1,5 +1,6 @@
 package com.example.nutriritmo.ui
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Home
@@ -85,11 +86,11 @@ fun NutriNav() {
                 }
             }
         }
-    ) { _ ->
+    ) { innerPadding ->
         NavHost(
             navController = navController,
             startDestination = Screen.Dashboard.route,
-            modifier = Modifier
+            modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Dashboard.route) { DashboardScreen(userId!!) }
             composable(Screen.Ayuno.route) { AyunoScreen(userId!!) }

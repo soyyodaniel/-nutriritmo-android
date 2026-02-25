@@ -1,4 +1,4 @@
-package com.example.nutriritmo
+package com.example.nutriritmo.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

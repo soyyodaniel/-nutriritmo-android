@@ -25,3 +25,18 @@ data class DetenerAyunoRequest(
     val fin_timestamp: Long,
     val duracion_horas: Double
 )
+
+data class RegisterRequest(
+    val nombre: String,
+    val edad: Int? = null,
+    val peso_inicial: Double? = null,
+    val altura: Double? = null,
+    val objetivo: String? = null,
+    val email: String,
+    val password: String
+)
+
+data class RegisterResponse(
+    val message: String,
+    val id_usuario: Int
+)
