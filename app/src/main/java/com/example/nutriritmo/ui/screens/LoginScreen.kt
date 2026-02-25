@@ -53,7 +53,7 @@ fun LoginScreen(
                 .padding(18.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Logo (pon tu logo en res/drawable/logo_nutri.png)
+            // Logo (pon el logo en res/drawable/logo_nutri.png)
            // Image(
                // painter = painterResource(id = R.drawable.logo_nutri),
               //  contentDescription = "NutriRitmo",
@@ -145,7 +145,7 @@ fun LoginScreen(
             Divider()
             Spacer(Modifier.height(14.dp))
 
-            // ✅ Solo Google si quieres (si NO quieres google, borra este bloque)
+            //  Google //
             OutlinedButton(
                 onClick = { /* TODO: google later */ },
                 modifier = Modifier
