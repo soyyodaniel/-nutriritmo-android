@@ -9,16 +9,11 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
-import com.example.nutriritmo.model.RegisterRequest
-import com.example.nutriritmo.model.RegisterResponse
+
 
 interface ApiService {
     @POST("api/auth/login")
     suspend fun login(@Body body: LoginRequest): retrofit2.Response<LoginResponse>
-
-    @POST("api/auth/register")
-    suspend fun register(@Body body: RegisterRequest): retrofit2.Response<RegisterResponse>
-
     @GET("api/ayunos/{idUsuario}")
     suspend fun obtenerAyunos(@Path("idUsuario") idUsuario: Int): List<AyunoDto>
     @GET("ping")
